@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Regular.woff2') format('woff2'),
+        url('Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html, body {
     margin: 0;
+    font-family: 'Ubuntu';
 }
 
 path {
@@ -25,7 +35,10 @@ path {
     background-color: rgb(45, 134, 239);
     border-right: 1px black solid;
     display: grid;
+    grid-template-rows: repeat(30, 1fr);
     grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: 14px;
 }
 
 .main {
@@ -41,24 +54,25 @@ path {
 }
 
 svg {
-    height: 30px;
+    height: 20px;
     width: calc(height);
 }
 
-.side-item1 svg {
-    height: 60px;
+#side-item1 svg {
+    height: 40px;
     width: calc(height);
 }
 
-.sidebar * {
+.sidebar>div {
     display: grid;
     grid-template: 1fr / 1fr 3fr;
     place-items: center;
     color: white;
-    justify-content: space-around;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.sidebar:nth-child(1) {
-    font-size: 24px;
-    font-weight: 600;
+.sidebar>div>div {
+    justify-self: left;
 }
