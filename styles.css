@@ -159,8 +159,69 @@ svg {
     border: 2px solid rgba(45, 135, 239, 0.274);
 }
 
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button * {
+    flex: 1;
+}
+
 .main {
     grid-row: span 3;
     grid-column: span 4;
-    background-color: rgba(196, 196, 196, 0.295);
+    background-color: rgb(196, 196, 196);
+    display: grid;
+    grid-template: 1fr 20fr / 2fr 1fr;
+}
+
+.proj {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / repeat(2, 1fr);
+    gap: 20px;
+    margin: 0px 10px 10px 10px;
+}
+
+.proj>div {
+    background-color: white;
+    border-left: 20px solid orange;
+    font-size: 7px;
+}
+
+.projects {
+    margin-left: 10px;
+}
+
+.anotren {
+    display: grid;
+    grid-template: 10fr 1fr 10fr / 1fr;
+}
+
+.announce {
+    display: grid;
+    background-color: white;
+    font-size: 10px;
+    margin: 0px 15px 5px 0px;
+}
+
+.announce>div {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.trend {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr 1fr;
+    font-size: 8px;
+    place-items: center;
+    background-color: white;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.trend svg {
+    grid-row: span 2;
 }
